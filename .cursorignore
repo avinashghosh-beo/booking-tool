@@ -1,0 +1,26 @@
+# Environment files
+.env
+.env.local
+.env.*
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+out/
+
+# Cache directories
+.cache/
+.next/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo 

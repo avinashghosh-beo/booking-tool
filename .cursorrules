@@ -1,0 +1,378 @@
+# CURSOR AI GUIDE
+# ==============
+
+# FILES TO ANALYZE:
+Look at these files:
+- All TypeScript/JavaScript: *.ts, *.tsx, *.js, *.jsx
+- All CSS/SCSS: *.css, *.scss, *.module.css, *.module.scss
+- Config files: *.json, .env.example, *.md
+
+# FILES TO IGNORE:
+Skip these:
+- node_modules folder
+- dist folder
+- build folder
+- .git folder
+- coverage folder
+- public folder
+- .env file (keep secrets safe!)
+
+# WHAT TO WATCH FOR:
+
+Frontend Code:
+- export default
+- function declarations
+- const declarations
+- interface definitions
+- type definitions
+- enum declarations
+- All VITE_ variables
+
+API & Services:
+- VITE_API usage
+- VITE_LOCATIONS_SERVICE_API_URL
+- getRequest functions
+- postRequest functions
+
+Environment Variables:
+- VITE_API
+- VITE_APP_CDN
+- VITE_ENC_KEY
+- VITE_ENCRYPTION_KEY
+- VITE_LOCATIONS_SERVICE_API_URL
+- VITE_STRIPE_PK
+
+Common Code Markers:
+- TODO: for tasks
+- FIXME: for bugs
+- NOTE: for important info
+- HACK: for temporary solutions
+
+# CONTEXT SETTINGS:
+Show this much surrounding code:
+- Frontend files: 5 lines before and after
+- API files: 4 lines before and after
+- Config files: 2 lines before and after
+- Never show more than 15 lines total
+
+# GENERAL SETTINGS:
+- Keep everything case-sensitive
+- Remove extra whitespace
+ 
+# AI INTERACTION RULES:
+When analyzing code:
+- Show work-in-progress thinking
+- Break down complex problems
+- Explore alternatives before concluding
+- Question assumptions
+
+When fixing errors:
+- Identify root causes
+- Show debugging steps
+- Suggest preventive measures
+- Provide test cases
+
+When building features:
+- Start with requirements
+- Show architecture decisions
+- Implement step by step
+- Include error handling
+- Add documentation
+
+When suggesting improvements:
+- Focus on maintainability
+- Consider performance
+- Think about scalability
+- Include type safety
+- Add error boundaries
+
+# CODE COMMENT MARKERS:
+Development Process:
+- "// EXPLORE:" for assumptions and alternatives
+- "// REVIEW:" for code that needs review
+- "// DEBUG:" for debugging notes
+- "// OPTIMIZE:" for performance improvements
+
+Documentation:
+- "// REQUIREMENT:" for feature requirements
+- "// DESIGN:" for architecture decisions
+- "// IMPLEMENT:" for implementation notes
+- "// SECURITY:" for security considerations
+- "// PERFORMANCE:" for performance notes
+
+# CODING PRINCIPLES TO ENFORCE:
+
+Clean Code Principles:
+- Single Responsibility Principle (SRP)
+  * Each component/function does one thing well
+  * Split large components into smaller ones
+  * Extract complex logic into custom hooks
+
+- DRY (Don't Repeat Yourself)
+  * Extract repeated code into reusable functions
+  * Create shared components for common UI elements
+  * Use utility functions for common operations
+
+- Separation of Concerns (SoC)
+  * Separate business logic from UI components
+  * Keep API calls in service files
+  * Store global state management separately
+  * Put styles in separate CSS/SCSS files
+
+- Modularity
+  * Organize code into logical modules
+  * Keep related code together
+  * Use clear folder structure:
+    - /components for UI components
+    - /hooks for custom hooks
+    - /services for API calls
+    - /utils for helper functions
+    - /types for TypeScript definitions
+
+- SOLID Principles
+  * Single Responsibility (one reason to change)
+  * Open/Closed (open for extension, closed for modification)
+  * Liskov Substitution (subtypes must be substitutable)
+  * Interface Segregation (specific interfaces better than general)
+  * Dependency Inversion (depend on abstractions)
+
+Code Organization:
+- Group related files together
+- Use meaningful file names
+- Keep files focused and manageable
+- Create index files for clean exports
+- Use barrel exports for cleaner imports
+
+Best Practices:
+- Write self-documenting code
+- Add meaningful comments
+- Use TypeScript for type safety
+- Handle errors appropriately
+- Include proper error boundaries
+- Write unit tests for critical logic
+- Use proper naming conventions
+- Implement proper prop validation
+- Add loading and error states
+
+# CODE PRESERVATION RULES:
+When modifying code:
+- Preserve all existing functions and their signatures
+- Keep track of all component props and their usage
+- Maintain existing state management patterns
+- Never skip or remove handler functions
+- Always check for missing function implementations
+
+Function Handling:
+- Track all function references in props
+- Keep all callback functions
+- Preserve event handlers
+- Maintain data transformation functions
+- Keep state update functions
+
+Code Review Checklist:
+- Check for missing function implementations
+- Verify all prop functions are included
+- Ensure all handlers are preserved
+- Confirm data flow remains intact
+- Validate all callbacks are present
+
+When suggesting changes:
+- List all functions being modified
+- Show which functions remain unchanged
+- Highlight any new function additions
+- Document function dependencies
+- Note prop function requirements
+
+Component Props:
+- Track all prop function references
+- Maintain prop callback signatures
+- Preserve prop update functions
+- Keep prop data transformers
+- Document prop function usage
+
+# CODE COMMENT MARKERS:
+Development Process:
+- "// EXPLORE:" for assumptions and alternatives
+- "// REVIEW:" for code that needs review
+- "// DEBUG:" for debugging notes
+- "// OPTIMIZE:" for performance improvements
+
+Documentation:
+- "// REQUIREMENT:" for feature requirements
+- "// DESIGN:" for architecture decisions
+- "// IMPLEMENT:" for implementation notes
+- "// SECURITY:" for security considerations
+- "// PERFORMANCE:" for performance notes
+
+# CODING PRINCIPLES TO ENFORCE:
+
+Clean Code Principles:
+- Single Responsibility Principle (SRP)
+  * Each component/function does one thing well
+  * Split large components into smaller ones
+  * Extract complex logic into custom hooks
+
+- DRY (Don't Repeat Yourself)
+  * Extract repeated code into reusable functions
+  * Create shared components for common UI elements
+  * Use utility functions for common operations
+
+- Separation of Concerns (SoC)
+  * Separate business logic from UI components
+  * Keep API calls in service files
+  * Store global state management separately
+  * Put styles in separate CSS/SCSS files
+
+- Modularity
+  * Organize code into logical modules
+  * Keep related code together
+  * Use clear folder structure:
+    - /components for UI components
+    - /hooks for custom hooks
+    - /services for API calls
+    - /utils for helper functions
+    - /types for TypeScript definitions
+
+- SOLID Principles
+  * Single Responsibility (one reason to change)
+  * Open/Closed (open for extension, closed for modification)
+  * Liskov Substitution (subtypes must be substitutable)
+  * Interface Segregation (specific interfaces better than general)
+  * Dependency Inversion (depend on abstractions)
+
+Code Organization:
+- Group related files together
+- Use meaningful file names
+- Keep files focused and manageable
+- Create index files for clean exports
+- Use barrel exports for cleaner imports
+
+Best Practices:
+- Write self-documenting code
+- Add meaningful comments
+- Use TypeScript for type safety
+- Handle errors appropriately
+- Include proper error boundaries
+- Write unit tests for critical logic
+- Use proper naming conventions
+- Implement proper prop validation
+- Add loading and error states
+
+# VALIDATION SCHEMA RULES
+When working with Zod schemas:
+- Always consider field dependencies and conditionals first
+- Make fields optional by default unless explicitly required
+- Add custom error messages for all enum validations
+- Document validation flow with clear comments
+- Test all possible validation paths before suggesting changes
+
+# FORM VALIDATION PRINCIPLES
+- Fields should only be required based on their dependencies
+- Error messages should be user-friendly and specific
+- Validation should follow the natural form flow
+- Consider all possible field states and combinations
+- Document validation logic with clear comments
+
+# CODE REVIEW CHECKLIST
+Add these validation-specific checks:
+- ✓ Check field dependencies
+- ✓ Verify optional/required states
+- ✓ Review error message clarity
+- ✓ Test all validation paths
+- ✓ Confirm conditional logic
+
+# TRANSLATION MANAGEMENT RULES
+
+## File Structure
+Monitor these translation files:
+- src/locales/en.json
+- src/locales/de.json
+
+## Translation Categories
+Organize translations into these main categories:
+
+1. ariaLabels
+   - For accessibility labels
+   - Format: camelCase
+   - Example: loginPage, testimonials
+
+2. labels
+   - For form labels and field names
+   - Format: camelCase
+   - Example: username, password, email
+
+3. screenNames
+   - For page/screen titles
+   - Format: camelCase
+   - Example: dashboard, settings, myOrders
+
+4. errorMessages
+   - For error notifications
+   - Format: camelCase
+   - Example: passwordRequired, emailInvalid
+
+5. successMessages
+   - For success notifications
+   - Format: PascalCase or camelCase
+   - Example: SetupSuccessfully!, accountSetupSuccess
+
+6. warningMessages
+   - For warning notifications
+   - Format: camelCase
+   - Example: resturePreviousData
+
+7. embeddedStrings
+   - For dynamic text with variables
+   - Format: camelCase
+   - Uses {{variable}} syntax
+   - Example: "NotUpdated": "{{label}} Not Updated"
+
+8. buttonLabels
+   - For button text
+   - Format: camelCase
+   - Example: confirm, submit, cancel
+
+9. strings
+   - For longer text content
+   - Format: camelCase
+   - Example: howDoYouWantToPublish
+
+10. shortStrings
+    - For brief UI text
+    - Format: camelCase
+    - Example: or, loading, cart
+
+11. tableTitles
+    - For table headers
+    - Format: camelCase
+    - Example: invoiceDate, totalAmount
+
+## Key Naming Conventions
+- Use camelCase for most keys
+- Group related terms together
+- Be consistent between en.json and de.json
+- Keep keys identical in both files
+
+## Variable Handling
+- Use double curly braces: {{variable}}
+- Common variables: {{label}}, {{title}}, {{maximum}}, {{minimum}}
+- Document all possible variables
+
+## HTML in Translations
+- Mark HTML content clearly in comments
+- Use minimal HTML, mainly for links and emphasis
+- Example: "<a target='new' href='{{link}}'>text</a>"
+
+## When Extracting Text
+1. Identify the appropriate category
+2. Check for existing similar translations
+3. Maintain consistent naming
+4. Add to both en.json and de.json
+5. Document any variables or HTML
+
+## Validation Rules
+- Ensure all keys exist in both files
+- Maintain parallel structure
+- Check for missing translations
+- Verify variable usage
+ 

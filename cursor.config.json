@@ -1,0 +1,92 @@
+{
+  "rules": {
+    // Development Process Rules
+    "development": {
+      "pattern": "**/*.{ts,tsx,js,jsx}",
+      "context": {
+        "before": 10,
+        "after": 10
+      },
+      "markers": [
+        "// EXPLORE:",
+        "// TODO:",
+        "// REVIEW:",
+        "// DEBUG:",
+        "// OPTIMIZE:"
+      ]
+    },
+
+    // Error Handling Rules
+    "errorHandling": {
+      "pattern": "**/*.{ts,tsx,js,jsx}",
+      "markers": ["try", "catch", "throw", "Error", "// ERROR:", "// FIX:"],
+      "context": {
+        "before": 8,
+        "after": 8
+      }
+    },
+
+    // Testing Rules
+    "testing": {
+      "pattern": "**/*.{test,spec}.{ts,tsx,js,jsx}",
+      "markers": ["describe", "it", "test", "expect", "// TEST:"],
+      "context": {
+        "before": 5,
+        "after": 5
+      }
+    },
+
+    // Architecture Rules
+    "architecture": {
+      "pattern": [
+        "**/components/**/*.{ts,tsx}",
+        "**/services/**/*.{ts,tsx}",
+        "**/hooks/**/*.{ts,tsx}",
+        "**/utils/**/*.{ts,tsx}"
+      ],
+      "markers": ["export", "import", "interface", "type", "// ARCHITECTURE:"],
+      "context": {
+        "before": 6,
+        "after": 6
+      }
+    },
+
+    // Documentation Rules
+    "documentation": {
+      "pattern": "**/*.{ts,tsx,js,jsx,md}",
+      "markers": ["/**", "/*", "//", "@param", "@returns", "// DOC:"],
+      "context": {
+        "before": 4,
+        "after": 4
+      }
+    }
+  },
+
+  "settings": {
+    "maxContextLines": 15,
+    "ignoreCase": false,
+    "trimWhitespace": true,
+    "excludePatterns": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/build/**",
+      "**/.git/**"
+    ]
+  },
+
+  "customMarkers": {
+    "exploration": ["// QUESTION:", "// ASSUMPTION:", "// ALTERNATIVE:"],
+    "buildProcess": [
+      "// REQUIREMENT:",
+      "// DESIGN:",
+      "// IMPLEMENT:",
+      "// DEPLOY:"
+    ],
+    "maintenance": [
+      "// MONITOR:",
+      "// UPDATE:",
+      "// PERFORMANCE:",
+      "// SECURITY:"
+    ]
+  }
+}

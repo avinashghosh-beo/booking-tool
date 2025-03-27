@@ -1,0 +1,25 @@
+{
+  "chrome": {
+    "enabled": true,
+    "debugPort": 9222,
+    "remoteDebugging": true,
+    "consoleCapture": {
+      "enabled": true,
+      "logLevel": "info",
+      "includeNetworkRequests": true
+    },
+    "targetUrl": "http://localhost:3000",
+    "autoLaunch": true,
+    "userDataDir": "${workspaceRoot}/.chrome-debug",
+    "args": [
+      "--remote-debugging-port=9222",
+      "--disable-web-security",
+      "--user-data-dir=${workspaceRoot}/.chrome-debug"
+    ]
+  },
+  "logging": {
+    "level": "debug",
+    "console": true,
+    "file": "${workspaceRoot}/.cursor/debug.log"
+  }
+} 
